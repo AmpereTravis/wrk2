@@ -1,3 +1,36 @@
+# HERE IS MY MESSAGE
+
+Since I can't open issue, I am using a PR to report issue compiling this project.
+Please be patient, I am no C expert.
+
+Was getting `src/script.c:486:5: error: implicit declaration of function 'gettimeofday' is invalid in C99 [-Werror,-Wimplicit-function-declaration]`
+
+so added, `-Wno-implicit-function-declaration`
+
+still, the build fails with
+
+```
+src/ssl.c:22:22: warning: unused function 'ssl_id' [-Wunused-function]
+static unsigned long ssl_id() {
+                     ^
+2 warnings generated.
+CC src/aprintf.c
+CC src/stats.c
+CC src/script.c
+CC src/units.c
+CC src/ae.c
+CC src/zmalloc.c
+CC src/http_parser.c
+CC src/tinymt64.c
+CC src/hdr_histogram.c
+LUAJIT src/wrk.lua
+LINK wrk
+ld: warning: Linking with PIE, -image_base will be ignored
+ld: missing LC_SEGMENT file 'obj/bytecode.o' for architecture arm64
+```
+
+
+
 # AmpereTravis fork of Kinvolk fork of wrk2
 This fork modifies wrk.c to make this project buildable on aarch64 bare-metal. 
 
