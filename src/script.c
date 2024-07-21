@@ -1,5 +1,6 @@
 // Copyright (C) 2013 - Will Glozer.  All rights reserved.
 
+#include <sys/time.h>
 #include <stdlib.h>
 #include <string.h>
 #include "script.h"
